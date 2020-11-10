@@ -1,24 +1,32 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# テーブル設計
 
-* Ruby version
+## users テーブル
+| Column         | Type   | Options     |
+| --------       | ------ | ----------- |
+| team           | string | null: false |
+| email          | string | null: false |
+| password       | string | null: false |
+| profile        | text   | null: false |
+| performance     | text   | null: false |
 
-* System dependencies
 
-* Configuration
+## posts テーブル
 
-* Database creation
+| Column             | Type      | Options           |
+| ------             | ------    | -----------       |
+| user               | references| foreign_key: true |
+| place              | text      | null: false       |
+| recruitment_team_id| integer   | null:false        |
+| spots_id           | integer   | null: false       |
+| average_age_id     | integer   | null: false       |
+| gender_id          | integer   | null:false        |
 
-* Database initialization
+## comment テーブル
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Column             | Type      | Options           |
+| ------             | ------    | -----------       |
+| user               | references| foreign_key: true |
+| post               | references| foreign_key: true |
+| text               | text      | null:false        |
