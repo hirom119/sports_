@@ -19,7 +19,7 @@
 | user               | references| foreign_key: true |
 | place              | text      | null: false       |
 | recruitment_team_id| integer   | null:false        |
-| spots_id           | integer   | null: false       |
+| sports_id          | integer   | null: false       |
 | average_age_id     | integer   | null: false       |
 | gender_id          | integer   | null:false        |
 

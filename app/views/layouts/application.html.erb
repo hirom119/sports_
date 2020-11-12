@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Sports</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <%= stylesheet_link_tag 'application' %>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+  <title>sports</title>
+  <%link_to %>
+</head>
+<body>
+  <header>
+    <div class ="header">
+    <h1 class ="sports">sports</h1>
+    <ul class ="lists-right">
+      <li><%= link_to '新規登録',class: "sign-up" %></li> 
+      <li><%= link_to 'ログイン',class: "sign-in" %></li> 
+      </div>
+  </header>
+</body>
 </html>
+
