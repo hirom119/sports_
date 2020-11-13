@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+ .header{
+  height:100px;
+  background-color: skyblue;
+}
+
+.sports{
+  font-size:19px;
+  padding:20px;
+}
+
+.lists-right{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  float: right;
+  margin-right:20px;
+}
