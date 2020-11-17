@@ -1,16 +1,52 @@
-<header>
-  <body>
-    <html>
-     <ul class ="lists-right">
-     <% if user_signed_in? %>
-  <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
-<%= link_to "投稿する",class: "post" %>
-          </div>
-      <% else %>
-      <li><%= link_to '新規登録',new_user_registration_path,class: "sign-up" %></li> 
-      <li><%= link_to 'ログイン',user_session_path,class: "sign-in" %></li> 
-      <% end %>
-  </header>
-</body>
-</html>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand text-info" href="#">sports</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="navbar-nav mr-auto">
+    </div>
+    <% if user_signed_in? %>
+    <%= link_to 'ログアウト', destroy_user_session_path,method: :delete, class: "logout" %>
+    <%= link_to '投稿する', class: :nav__btn %>
+    <% else %>
+     <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+     <%= link_to '新規登録', new_user_registration_path, class: "sign-up"%>
+     <% end %>
+  </div>
+</nav>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<div class="jumbotron jumbotron-fluid text-center bg-primary White link">
+  <div class="container">
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
+</div>
+    <div class="card" style="width:200px">
+      <div class="card-body" style="width:200px">
+      <div>
+        <%= image_tag "coffee-04.jpg", class:"card-img-top"%>
+      </div>
+        <h4 class="card-title">Card title</h4>
+        <p class="card-text">
+      Some quick example text to build on the card title
+      and make up the bulk of the card's content.
+        </p>
+    <a href="#!" class="btn btn-primary">Go somewhere</a>
+</div>
+  </div>
+</div>
+<div class="card">
+  <div class="card-header">
+    Quote
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div>
