@@ -52,7 +52,7 @@ end
       it "性別が空だと投稿できない"do
         @post.gender = nil
         @post.valid?
-        expect(@post.errors.full_messages).to include ("Gender can't be blank")
+        expect(@post.errors.full_messages).to include ("Gender can't be blank") 
       end
     end
   end
