@@ -12,6 +12,7 @@
 | performance     | text   | null: false |
 
 
+
 ## posts テーブル
 
 | Column             | Type      | Options           |
@@ -22,6 +23,7 @@
 | sports_id          | integer   | null: false       |
 | average_age_id     | integer   | null: false       |
 | gender_id          | integer   | null:false        |
+｜Remarks            | text      | null:false        |
 
 ## comment テーブル
 

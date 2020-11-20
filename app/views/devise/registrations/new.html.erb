@@ -6,7 +6,7 @@
    会員情報入力
   </h1>
         </div>
-
+<%= f.file_field :image, id:"item-image" %>
   <div class="form-group">
       <label for="exampleFormControlInput1">メールアドレス</label>
       <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
