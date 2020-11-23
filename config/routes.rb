@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  resources :posts, only:[:index, :new,:create]
+  resources :posts, only:[:index, :new,:create,:show]
+    resources :users ,only:[:show]
 end

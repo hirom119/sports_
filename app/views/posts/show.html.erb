@@ -1,0 +1,49 @@
+<div class="item-explain-box">
+      
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">チーム名</th>
+          <td class="detail-value"><%= link_to "#{@post.user.team}",user_path(@post.user)%></td>
+        </tr>
+        <tr>
+          <th class="detail-item">場所</th>
+          <td class="detail-value"><%= @post.place %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">募集チーム数</th>
+          <td class="detail-value"><%= @post.recruitment_team.name %></td> 
+        </tr>
+        <tr>
+          <th class="detail-item">競技</th>
+          <td class="detail-value"><%= @post.competition.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">募集する世代</th>
+          <td class="detail-value"><%= @post.average_age.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">性別</th>
+          <td class="detail-value"><%= @post.gender.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">備考</th>
+          <td class="detail-value"><%= @post.remarks %></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="comment-box">
+    <form>
+      <textarea class="comment-text"></textarea>
+      <p class="comment-warn">
+        相手のことを考え丁寧なコメントを心がけましょう。
+        <br>
+        不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      </p>
+      <button type="submit" class="comment-btn">
+       
+        <span>コメントする<span>
+      </button>
+    </form>
+  </div>
