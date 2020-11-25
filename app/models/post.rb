@@ -5,6 +5,7 @@ class Post < ApplicationRecord
   belongs_to_active_hash :average_age
   belongs_to_active_hash :recruitment_team
   belongs_to :user
+  has_many :comments
 
 with_options numericality: {other_than:1} do
 validates :gender_id
