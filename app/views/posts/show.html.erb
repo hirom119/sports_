@@ -50,7 +50,7 @@
       <% if @comments %>
       <div id ='comments'>
         <% @comments.reverse.each do |comment| %>
-          <p>
+          <p class ="comment-list">
             <strong><%= link_to comment.user.team, "/users/#{comment.user_id}" %>：</strong>
             <%= comment.text %>
           </p>
