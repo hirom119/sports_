@@ -1,8 +1,15 @@
 <div class="item-explain-box">
-      
     </div>
     <table class="detail-table">
       <tbody>
+        <ul class ="more_list">
+          <li class = "edit_btn">
+            <%= link_to '編集',edit_post_path,class:"btn btn-primary"%>
+          </li>
+          <li class = "destory_btn">
+            <%= link_to '削除',edit_post_path,class:"btn btn-primary"%>
+          </li>
+        </ul>
         <tr>
           <th class="detail-item">チーム名</th>
           <td class="detail-value"><%= link_to "#{@post.user.team}",user_path(@post.user)%></td>

@@ -29,36 +29,44 @@
   position: relative;
 }
 
-.comment-box{
-  text-align:center;
+.comment-box {
+  text-align: center;
 }
 
-.container-comment{
-  width:900px;
+.container-comment {
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
   padding: 30px;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
   box-sizing: border-box;
 }
 
-.form{
-  text-align:center;
-
+.form {
+  text-align: center;
 }
 
-.comments{
+.comments {
   text-align: justify;
 }
 
-.comment-list{
-  margin:20px;
+.comment-list {
+  margin: 20px;
 }
 
-.comment-btn{
+.comment-btn {
   display: flex;
   justify-content: center;
-  margin-top:20px;
-  margin-bottom:20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.more_list {
+  display: flex;
+  justify-content: center;
+}
+
+.edit_btn {
+  margin-right: 20px;
 }
