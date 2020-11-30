@@ -10,8 +10,8 @@
       <%= f.text_area :place, class:"input-default", id:"place", placeholder:"場所を入力してください", autofocus: true %>
     </div>
     <div class="form-group">
-       <%= f.collection_select :recruitment_team_id, RecruitmentTeam.all, :id, :name %>
       <label for="exampleFormControlInput1">募集するチーム数</label>
+       <%= f.collection_select :recruitment_team_id, RecruitmentTeam.all, :id, :name %>
     </div>
     <div class="form-group">
       <label for="exampleFormControlInput1">スポーツ</label>
