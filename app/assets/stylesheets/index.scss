@@ -1,35 +1,37 @@
-.post-list{
+.post-list {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   flex-wrap: wrap;
-
 }
-.card{
-  margin-bottom:40px;
+.card {
+  margin-bottom: 40px;
 }
 
-.font-color{
-  color:black;
+.card-title {
+  font-size: 20px;
 }
-.font-colors{
-  color:#00bfff;
-} 
 
-.team{
+.font-color {
+  color: black;
+}
+.font-colors {
+  color: #00bfff;
+}
+
+.team {
   list-style: none;
 }
 
-.navbar-nav{
+.navbar-nav {
   margin-left: auto;
-
 }
 
-.nav-item{
-  margin-right:10px;
+.nav-item {
+  margin-right: 10px;
 }
 
-.users-show{
- display:flex;
- justify-content: flex-end;
- margin:30px 0px 0 0px;
+.users-show {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 0px 0 0px;
 }
