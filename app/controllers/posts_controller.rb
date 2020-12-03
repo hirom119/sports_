@@ -22,6 +22,10 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user)
   end
     
+  def search
+    @posts = Post.search(params[:keyword])
+  end
+
   def edit
   end
 
