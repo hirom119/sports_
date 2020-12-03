@@ -7,6 +7,14 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :comments
 
+  def self.search(search)
+    if search != ""
+      Post.where('competition_id LIKE(?) ', "%#{search}%")
+    else
+      Post.all
+    end
+  end
+
 with_options numericality: {other_than:1} do
 validates :gender_id
 validates :recruitment_team_id
