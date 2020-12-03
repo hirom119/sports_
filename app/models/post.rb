@@ -6,20 +6,22 @@ class Post < ApplicationRecord
   belongs_to_active_hash :recruitment_team
   belongs_to :user
   has_many :comments
-
+  
+  
   def self.search(search)
     if search != ""
-      Post.where('competition_id LIKE(?) ', "%#{search}%")
+      @post = Competition.find_by(name: "#{search}")
+      Post.where(competition_id: @post.id)
     else
       Post.all
     end
   end
 
 with_options numericality: {other_than:1} do
-validates :gender_id
-validates :recruitment_team_id
-validates :competition_id
-validates :average_age_id
+  validates :gender_id
+  validates :recruitment_team_id
+  validates :competition_id
+  validates :average_age_id
 end
 with_options presence: true do
   validates :gender_id
