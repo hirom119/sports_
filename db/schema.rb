@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_11_24_003000) do
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC", force: :cascade do |t|
     t.text "place", null: false
     t.integer "recruitment_team_id", null: false
-    t.integer "competition_id", null: false
+    t.text "competition", null: false
     t.integer "average_age_id", null: false
     t.integer "gender_id", null: false
     t.text "remarks", null: false

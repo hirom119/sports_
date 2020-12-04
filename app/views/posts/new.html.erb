@@ -10,12 +10,12 @@
       <%= f.text_area :place, class:"input-default", id:"place", placeholder:"場所を入力してください", autofocus: true %>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlInput1">募集するチーム数</label>
-       <%= f.collection_select :recruitment_team_id, RecruitmentTeam.all, :id, :name %>
+      <label for="exampleFormControlInput1">スポーツ</label>
+      <%= f.text_area :competition, class:"input-default", id:"competition", placeholder:"スポーツを入力してください", autofocus: true %>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlInput1">スポーツ</label>
-      <%= f.collection_select :competition_id, Competition.all, :id, :name %>
+      <label for="exampleFormControlInput1">募集するチーム数</label>
+       <%= f.collection_select :recruitment_team_id, RecruitmentTeam.all, :id, :name %>
     </div>
     <div class="form-group">
       <label for="exampleFormControlInput1">募集する世代を入力してください</label>
