@@ -6,7 +6,7 @@ RSpec.describe Post, type: :model do
 end
   describe '投稿'do
     context '投稿がうまくいくとき' do
-      it "recruitment_team_idとcompetition_idとaverage_age_idとplaceとremarksとgender_idがあれば投稿できる"do
+      it "recruitment_team_idとcompetitionとaverage_age_idとplaceとremarksとgender_idがあれば投稿できる"do
         expect(@post).to be_valid
       end
       it "募集チーム数が１だと投稿できない"do
@@ -15,7 +15,7 @@ end
         expect(@post.errors.full_messages).to include("Recruitment team must be other than 1")
       end
       it "競技が1だと投稿できない"do 
-        @post.competition_id = 1
+        @post.competition = 1
         @post.valid?
         expect(@post.errors.full_messages).to include("Competition must be other than 1")
       end

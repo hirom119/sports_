@@ -24,7 +24,7 @@
             </div>
           <li class ="font-colors"><span class ="font-color">性別　</span><%= post.gender.name %></li>
           <li class ="font-colors"><span class ="font-color">募集チーム　</span><%= post.recruitment_team.name %></li>
-          <li class ="font-colors"><span class ="font-color">競技名　</span><%= post.competition.name %></li>
+          <li class ="font-colors"><span class ="font-color">競技名　</span><%= post.competition %></li>
           <div class ="users-show" style ="text-align">投稿チーム　
             <%= link_to post.user.team,user_path(post.user)%>
           </div>
