@@ -11,7 +11,7 @@ class RecruitmentTeam < ActiveHash::Base
     { id: 9, name: '8チーム' },
     { id: 10, name: '9チーム' },
     { id: 11, name: '10チーム' },
-    { id: 12, name: '11チーム以上' },
+    { id: 12, name: '11チーム以上' }
   ]
   include ActiveHash::Associations
   has_many :posts

@@ -1,5 +1,4 @@
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
    <%= form_with(url: search_posts_path, local: true, method: :get, class: "form-control mr-sm-2") do |form| %>
   <%= form.text_field :keyword, placeholder: "sportsを検索する", class: "search-input" %>
   <%= form.submit "検索", class: "search-btn btn btn-outline-primary" %>
@@ -46,3 +45,4 @@
   </div>
 </div>
 </div>
+  

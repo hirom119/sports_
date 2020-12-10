@@ -1,18 +1,18 @@
 class PostsController < ApplicationController
-  before_action :set_post,only: [:edit,:show,:update,:destroy]
+  before_action :set_post, only: [:edit, :show, :update, :destroy]
   def index
     @posts = Post.all
   end
 
   def new
     @post = Post.new
-    end
-    
+  end
+
   def create
     @post = Post.new(post_params)
     if @post.save
       redirect_to root_path
-    else 
+    else
       render :new
     end
   end
@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
   end
-    
+
   def search
     @posts = Post.search(params[:keyword])
   end
@@ -31,8 +31,8 @@ class PostsController < ApplicationController
 
   def update
     if @post.update(post_params)
-       redirect_to post_path
-    else 
+      redirect_to post_path
+    else
       render :edit
     end
   end
@@ -43,11 +43,12 @@ class PostsController < ApplicationController
   end
 
   private
-  def post_params 
-    params.require(:post).permit(:place,:recruitment_team_id,:competition,:average_age_id,:gender_id,:remarks).merge(user_id: current_user.id)
+
+  def post_params
+    params.require(:post).permit(:place, :recruitment_team_id, :competition, :average_age_id, :gender_id, :remarks).merge(user_id: current_user.id)
   end
 
   def set_post
     @post = Post.find(params[:id])
-  end 
+  end
 end
