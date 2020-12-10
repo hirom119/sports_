@@ -1,48 +1,58 @@
+<%= render 'layouts/header' %>
+<div class="topPage">
 
-   <%= form_with(url: search_posts_path, local: true, method: :get, class: "form-control mr-sm-2") do |form| %>
-  <%= form.text_field :keyword, placeholder: "sportsを検索する", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn btn btn-outline-primary" %>
-<% end %>
-<div class="jumbotron jumbotron-fluid text-center bg-successt White link" style="height: 500px;">
-  <div class="container">
-    <h1 class="display-4">試合をしよう</h1>
-    <p class="lead">対戦相手を見つけよう</p>
-  </div>
-</div>
-
- <div class ="post-list">
- <% @posts.each do |post| %>
+  <%= form_with(url: search_posts_path, local: true, method: :get, class: "form-control mr-sm-2") do |f| %>
+    <%= f.text_field :keyword, placeholder: "sportsを検索する", class: "search-input" %>
+    <%= f.submit "検索", class: "btn btn-outline-primary search-btn" %>
+  <% end %>
+    <div class="jumbotron jumbotron-fluid text-center bg-successt White link" style="height: 500px;">
+      <div class="topback">
+        <h1 class="display-4">試合をしよう</h1>
+        <p class="lead">対戦相手を見つけよう</p>
+      </div>
+    </div>
+<div class="container">
+  <div class ="post-list">
+    <% @posts.each do |post| %>
     <div class="card" style="width:300px">
-      <div class = "card-body" style="width:1000px ">
+      <div class = "card-body" >
         <h1 class="card-title">
           <%= link_to post.place,post_path(post.id),method: :get %>
         </h1>
         <ul class = "team text-center"  style="width: 200px;" >
-        <div class ="average-age-list">
-          <li class ="font-colors"><span class ="font-color">募集する世代</span> <%= post.average_age.name %></li>
-            </div>
-          <li class ="font-colors"><span class ="font-color">性別　</span><%= post.gender.name %></li>
-          <li class ="font-colors"><span class ="font-color">募集チーム　</span><%= post.recruitment_team.name %></li>
-          <li class ="font-colors"><span class ="font-color">競技名　</span><%= post.competition %></li>
-          <div class ="users-show" style ="text-align">投稿チーム　
+          <%# <div class ="average-age-list"> %>
+          <li class ="font-colors"><span class="font-color">募集する世代</span>
+            <%= post.average_age.name %>
+          </li>
+          <%# </div> %>
+          <li class ="font-colors"><span class="font-color">性別　</span>
+            <%= post.gender.name %>
+          </li>
+          <li class ="font-colors"><span class="font-color">募集チーム　</span>
+            <%= post.recruitment_team.name %>
+          </li>
+          <li class ="font-colors"><span class="font-color">競技名　</span>
+            <%= post.competition %>
+          </li>
+          <li class ="fotn-colors"><span class="forn-color">投稿チーム　</span>
             <%= link_to post.user.team,user_path(post.user)%>
-          </div>
+          </li>
         </ul>
-        </div>
       </div>
-    <% end %> 
     </div>
+    <% end %> 
+  </div> 
 
-<div class="card">
-  <div class="card-header">
-    Quote
-  </div>
-  <div class="card-body">
-    <blockquote class="blockquote mb-0">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-    </blockquote>
+  <div class="card">
+    <div class="card-header">
+      Quote
+    </div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+      </blockquote>
+    </div>
   </div>
 </div>
 </div>
-  
